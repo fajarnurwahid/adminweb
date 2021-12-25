@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- ICON -->
+	<script src="https://unpkg.com/phosphor-icons"></script>
+	<!-- MY CSS -->
+	<link rel="stylesheet" href="style.css">
+
+	<title>AdminWeb</title>
+</head>
+<body>
+
+	<!-- start: SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class="ph-flame-fill"></i>
+		</a>
+
+		<ul class="sidebar__menu">
+			<li>
+				<a href="#" class="active"><i class="ph-house-fill"></i></a>
+				<ul class="sidebar__submenu">
+					<li class="title">Dashboard</li>
+					<li><a href="#">Sales</a></li>
+					<li><a href="#">Analytics</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><i class="ph-airplay-fill"></i></a>
+				<ul class="sidebar__submenu">
+					<li class="title">Components</li>
+					<li><a href="#">Modals</a></li>
+					<li><a href="#">Alerts</a></li>
+					<li><a href="#">Badges</a></li>
+					<li><a href="#">Tabs</a></li>
+					<li><a href="#">Cards</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><i class="ph-clipboard-fill"></i></a>
+				<ul class="sidebar__submenu">
+					<li class="title">Forms</li>
+					<li><a href="#">Basic</a></li>
+					<li><a href="#">Input group</a></li>
+					<li><a href="#">Layout</a></li>
+					<li><a href="#">Validation</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><i class="ph-file-fill"></i></a>
+				<ul class="sidebar__submenu">
+					<li class="title">Pages</li>
+					<li>
+						<a href="#">Authentication <i class="ph-caret-right-fill"></i></a>
+						<ul class="sidebar__dropdown-menu">
+							<li><a href="#">Login page</a></li>
+							<li><a href="#">Register page</a></li>
+							<li><a href="#">Forgot password</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Privacy policy</a></li>
+					<li><a href="#">Landing page</a></li>
+					<li>
+						<a href="#">Error <i class="ph-caret-right-fill"></i></a>
+						<ul class="sidebar__dropdown-menu">
+							<li><a href="#">404</a></li>
+							<li><a href="#">503</a></li>
+							<li><a href="#">Maintenance</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><i class="ph-user-circle-fill"></i></a>
+				<ul class="sidebar__submenu">
+					<li class="title">Accounts</li>
+					<li><a href="#">User settings</a></li>
+					<li><a href="#">Change password</a></li>
+				</ul>
+			</li>
+			<li class="divider"></li>
+			<li>
+				<a href="#"><i class="ph-gear-fill"></i></a>
+			</li>
+			<li>
+				<a href="#" class="logout"><i class="ph-sign-out-fill"></i></a>
+			</li>
+		</ul>
+	</section>
+
+	<!-- start: SIDEBAR OVERLAY -->
+	<div class="sidebar-overlay"></div>
+	<!-- end: SIDEBAR OVERLAY -->
+	<!-- end: SIDEBAR -->
+
+	<!-- start: SIDEBAR MOBILE -->
+	<section id="sidebar-mobile">
+		<i class="ph-squares-four-fill toggle-sidebar"></i>
+		<a href="#" class="brand">
+			<i class="ph-flame-fill"></i>
+			Adminweb
+		</a>
+	</section>
+	<!-- end: SIDEBAR MOBILE -->
+	
+	<script src="script.js"></script>
+</body>
+</html>
