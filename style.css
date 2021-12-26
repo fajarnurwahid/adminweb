@@ -235,6 +235,237 @@ body {
 
 
 
+/* start: MAIN */
+#main {
+	position: relative;
+	left: 5rem;
+	width: calc(100% - 5rem);
+}
+
+/* start: MAIN TOP */
+#main .main__top {
+	background: var(--dark-l-1);
+	padding: 1.25rem;
+	display: flex;
+	grid-gap: 1.5rem;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap-reverse;
+}
+#main .main__top .main__top__title h3 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: var(--white);
+	margin-bottom: .5rem;
+}
+#main .main__top .main__top__title .breadcrumbs {
+	display: flex;
+	grid-gap: .5rem;
+	align-items: center;
+}
+#main .main__top .main__top__title .breadcrumbs :is(li, a) {
+	font-size: .875rem;
+	color: var(--white);
+}
+#main .main__top .main__top__title .breadcrumbs li a:hover {
+	text-decoration: underline;
+}
+#main .main__top .main__top__title .breadcrumbs .divider {
+	color: var(--grey);
+}
+#main .main__top .main__top__title .breadcrumbs li a.active {
+	pointer-events: none;
+	color: var(--grey);
+}
+#main .main__top .main__top__menu {
+	display: flex;
+	align-items: center;
+	grid-gap: 2rem;
+}
+#main .main__top .main__top__menu > li {
+	position: relative;
+}
+#main .main__top .main__top__menu .profile img {
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	object-fit: cover;
+}
+#main .main__top .main__top__menu > li > a {
+	font-size: 1.25rem;
+	color: var(--dark-l-2);
+}
+#main .main__top .main__top__menu > li > a:hover {
+	color: var(--light);
+}
+#main .main__top .main__top__menu .main__dropdown {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	width: 300px;
+	background: var(--white);
+	box-shadow: 8px 0 20px rgba(0, 0, 0, .05);
+	padding: 1.25rem;
+	border-radius: 5px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .2s;
+	z-index: 900;
+}
+#main .main__top .main__top__menu .main__dropdown.active {
+	opacity: 1;
+	visibility: visible;
+}
+#main .main__top .main__top__menu .main__dropdown form {
+	padding-bottom: .5rem;
+	border-bottom: 1px solid var(--light);
+}
+#main .main__top .main__top__menu .main__dropdown form input {
+	width: 100%;
+	outline: none;
+	border: none;
+}
+#main .main__top .main__top__menu .main__dropdown span {
+	font-weight: 500;
+	color: var(--grey);
+	margin: 1rem 0;
+	display: inline-block;
+}
+#main .main__top .main__top__menu .main__dropdown .recent-search li a h5 {
+	font-size: 1rem;
+	font-weight: 600;
+}
+#main .main__top .main__top__menu .main__dropdown .recent-search li a:hover h5 {
+	color: var(--blue);
+}
+#main .main__top .main__top__menu .main__dropdown .recent-search li a p {
+	font-size: .75rem;
+	font-weight: 400;
+	color: var(--grey);
+}
+#main .main__top .main__top__menu .main__dropdown .recent-search li:not(:last-child) {
+	margin-bottom: .75rem;
+}
+#main .main__top .main__top__menu .main__dropdown .recent-search {
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+#main .main__top .main__top__menu .main__dropdown .notification__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#main .main__top .main__top__menu .main__dropdown .notification__top h4 {
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+#main .main__top .main__top__menu .main__dropdown .notification__top span {
+	color: var(--white);
+	padding: .25rem .5rem;
+	display: inline-block;
+	border-radius: 2px;
+	background: var(--green);
+	font-size: .75rem;
+	font-weight: 500;
+}
+#main .main__top .main__top__menu .main__dropdown .notification__top {
+	border-bottom: 1px solid var(--light);
+	margin-bottom: 1rem;
+}
+#main .main__top .main__top__menu .main__dropdown .notification__item li a {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	grid-gap: .5rem;
+}
+#main .main__top .main__top__menu .main__dropdown .notification__item li a h5 {
+	font-size: 1rem;
+	font-weight: 500;
+}
+#main .main__top .main__top__menu .main__dropdown .notification__item li a p {
+	font-size: .75rem;
+	color: var(--grey);
+}
+#main .main__top .main__top__menu .main__dropdown .notification__item li a span {
+	font-size: .75rem;
+	color: var(--grey);
+	background: var(--light);
+	padding: .25rem .5rem;
+	white-space: nowrap;
+	border-radius: 2px;
+}
+#main .main__top .main__top__menu .main__dropdown .notification__item li:not(:last-child) {
+	margin-bottom: .75rem;
+}
+#main .main__top .main__top__menu .main__dropdown .notification__item li a:hover h5 {
+	color: var(--blue);
+}
+#main .main__top .main__top__menu .main__dropdown .notification__item {
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+#main .main__top .main__top__menu .inbox span {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: .5rem;
+	height: .5rem;
+	border-radius: 50%;
+	background: var(--red);
+}
+
+#main .main__top .main__top__menu .main__dropdown .profile__top {
+	display: flex;
+	align-items: center;
+	grid-gap: 1rem;
+}
+#main .main__top .main__top__menu .main__dropdown .profile__top img {
+	width: 3.5rem;
+	height: 3.5rem;
+	border-radius: 5px;
+	object-fit: cover;
+}
+#main .main__top .main__top__menu .main__dropdown .profile__top .name h5 {
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+#main .main__top .main__top__menu .main__dropdown .profile__top .name p {
+	font-size: .875rem;
+	color: var(--grey);
+}
+#main .main__top .main__top__menu .main__dropdown .profile__top {
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid var(--light);
+}
+#main .main__top .main__top__menu .main__dropdown .profile__menu li a {
+	display: flex;
+	align-items: center;
+	grid-gap: .75rem;
+	color: var(--grey);
+	font-weight: 500;
+	padding: .5rem .75rem;
+	font-size: .875rem;
+}
+#main .main__top .main__top__menu .main__dropdown .profile__menu li a i {
+	font-size: 1.25rem;
+}
+#main .main__top .main__top__menu .main__dropdown .profile__menu li a:hover {
+	background: var(--light);
+	color: var(--blue);
+}
+/* end: MAIN TOP */
+
+/* end: MAIN */
+
+
+
+
+
+
+
 /* start: BREAKPOINTS */
 @media screen and (max-width: 576px) {
 	#sidebar-mobile {
@@ -256,6 +487,33 @@ body {
 	}
 	#sidebar.active + .sidebar-overlay {
 		display: block;
+	}
+
+
+
+
+
+
+
+	#main {
+		position: relative;
+		left: 0;
+		width: 100%;
+	}
+
+	#main .main__top .main__top__menu .main__dropdown {
+		position: fixed;
+		top: 7.5rem;
+		right: 1.25rem;
+		left: 1.25rem;
+		width: unset;
+		background: var(--white);
+		box-shadow: 8px 0 20px rgba(0, 0, 0, .05);
+		padding: 1.25rem;
+		border-radius: 5px;
+		opacity: 0;
+		visibility: hidden;
+		transition: all .2s;
 	}
 }
 /* end: BREAKPOINTS */
