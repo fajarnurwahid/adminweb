@@ -304,7 +304,7 @@ body {
 	right: 0;
 	width: 300px;
 	background: var(--white);
-	box-shadow: 8px 0 20px rgba(0, 0, 0, .05);
+	box-shadow: 4px 4px 16px rgba(0, 0, 0, .1);
 	padding: 1.25rem;
 	border-radius: 5px;
 	opacity: 0;
@@ -458,6 +458,159 @@ body {
 }
 /* end: MAIN TOP */
 
+/* start: MAIN BODY */
+#main .main__body {
+	padding: 1.25rem;
+	box-shadow: inset 0 8rem 0 var(--dark-l-1);
+}
+#main .main__body .main__body__box-info {
+	display: flex;
+	grid-gap: 1.25rem;
+	flex-wrap: wrap;
+}
+#main .main__body .main__body__box-info li {
+	flex: 1 0 260px;
+	background: var(--white);
+	padding: 1.25rem 1.5rem;
+	border-radius: 5px;
+	box-shadow: 4px 4px 16px rgba(0, 0, 0, .05);
+}
+#main .main__body .main__body__box-info li i {
+	justify-content: flex-start;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+#main .main__body .main__body__box-info li:nth-child(1) i {
+	color: var(--blue);
+}
+#main .main__body .main__body__box-info li:nth-child(2) i {
+	color: var(--green);
+}
+#main .main__body .main__body__box-info li:nth-child(3) i {
+	color: var(--red);
+}
+#main .main__body .main__body__box-info li h5 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	margin-bottom: .5rem;
+}
+#main .main__body .main__body__box-info li p {
+	font-size: .875rem;
+	font-weight: 500;
+	color: var(--grey);
+}
+
+#main .main__body .main__body__data {
+	display: flex;
+	grid-gap: 1.25rem;
+	margin-top: 1.25rem;
+	flex-wrap: wrap;
+}
+#main .main__body__data > div {
+	flex: 1 0 360px;
+	background: var(--white);
+	padding: 1.25rem 1.5rem;
+	border-radius: 5px;
+	box-shadow: 4px 4px 16px rgba(0, 0, 0, .05);
+}
+#main .main__body :is(.sales-summary__top, .members__top) {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+#main .main__body :is(.sales-summary__top, .members__top) h4 {
+	font-size: 1.125rem;
+	font-weight: 500;
+}
+#main .main__body .sales-summary__info {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1rem;
+	margin-bottom: 1rem;
+}
+#main .main__body .sales-summary__info li p {
+	font-size: .75rem;
+	font-weight: 500;
+	color: var(--grey);
+}
+#main .main__body .sales-summary__info li h5 {
+	font-size: 1.125rem;
+	font-weight: 600;
+}
+
+#main .main__body .members__user {
+	max-height: 500px;
+	overflow-y: auto;
+}
+#main .main__body .members__user li {
+	display: flex;
+	grid-gap: .5rem;
+	align-items: center;
+}
+#main .main__body .members__user li:not(:last-child) {
+	margin-bottom: 1rem;
+}
+#main .main__body .members__user li img {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 2px;
+	object-fit: cover;
+}
+#main .main__body .members__user li .profile h5 {
+	font-size: 1rem;
+	font-weight: 500;
+}
+#main .main__body .members__user li .profile p {
+	font-size: .75rem;
+	font-weight: 500;
+	color: var(--grey);
+}
+#main .main__body .members__user li span {
+	font-size: .75rem;
+	display: inline-block;
+	margin-left: auto;
+	padding: .25rem .75rem;
+	border-radius: 2px;
+	background: var(--light);
+	font-weight: 500;
+}
+#main .main__body :is(.members__menu, .sales-summary__menu) {
+	position: relative;
+}
+#main .main__body :is(.members__menu, .sales-summary__menu) i {
+	cursor: pointer;
+}
+#main .main__body :is(.members__menu, .sales-summary__menu) .menu {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	width: 160px;
+	background: var(--white);
+	padding: 5px 0;
+	border-radius: 5px;
+	box-shadow: 4px 4px 16px rgba(0, 0, 0, .1);
+	opacity: 0;
+	visibility: hidden;
+	transition: all .2s;
+}
+#main .main__body :is(.members__menu, .sales-summary__menu) .menu.active {
+	opacity: 1;
+	visibility: visible;
+}
+#main .main__body :is(.members__menu, .sales-summary__menu) .menu li a {
+	display: block;
+	padding: .5rem .75rem;
+	font-size: .75rem;
+	color: var(--grey);
+	font-weight: 500;
+}
+#main .main__body :is(.members__menu, .sales-summary__menu) .menu li a:hover {
+	background: var(--light);
+	color: var(--blue);
+}
+/* end: MAIN BODY */
+
 /* end: MAIN */
 
 
@@ -507,13 +660,10 @@ body {
 		right: 1.25rem;
 		left: 1.25rem;
 		width: unset;
-		background: var(--white);
-		box-shadow: 8px 0 20px rgba(0, 0, 0, .05);
-		padding: 1.25rem;
-		border-radius: 5px;
-		opacity: 0;
-		visibility: hidden;
-		transition: all .2s;
+	}
+
+	#main .main__body__data > div {
+		flex: 1 0 0;
 	}
 }
 /* end: BREAKPOINTS */
